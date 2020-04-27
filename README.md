@@ -37,8 +37,7 @@ Build and run Docker image:
  ```
   > make
 ```
-This should result in a build, some pip installs, and a running dev server. 
-TODO: Add test endpoint.
+This should result in a build, some pip installs, and a running dev server. Once the dev server is running try going to http://localhost:5000/. You should get a hello world message. 
 
 Once the image is built you can just run:
 ```
