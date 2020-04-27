@@ -1,0 +1,5 @@
+flask
+flask-sqlalchemy
+flask-marshmallow
+Flask-JWT-Extended
+Flask_Mail
