@@ -16,7 +16,10 @@ Don't use this in a production environment.
 - [Installing Chocolatey](https://chocolatey.org/docs/installation)
 
 #### After Installing Chocolatey
+Run choco commands for any of the tools below if you don't already have them installed. 
 ```
+choco install git
+choco install docker-desktop
 choco install make
 ```
 
