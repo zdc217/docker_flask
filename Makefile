@@ -12,7 +12,7 @@ build: .build
 	echo > $@
 
 run: build
-	docker run $(DARGS) -p $(PORT) $(IMAGE)
+	docker-compose up
 
 shell: build
 	docker run $(DARGS) --entrypoint /bin/bash $(IMAGE)
