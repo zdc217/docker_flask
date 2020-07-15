@@ -1,6 +1,6 @@
 .PHONY: build run clean shell
 SRCS:=Dockerfile requirements.in app.py
-IMAGE:=docker_flask
+IMAGE:=docker_flask_web
 PORT:=5000:5000
 DARGS:=-it --rm -v $(CURDIR):/app
 
@@ -8,7 +8,7 @@ all: requirements.txt run
 
 build: .build
 .build: $(SRCS)
-	docker build -t $(IMAGE) .
+	docker-compose build
 	echo > $@
 
 run: build
@@ -25,4 +25,4 @@ clean:
 #rm .build
 # rm throws an error on windows, so using del for now.
 	- del /Q /F .build
-	- docker rmi $(IMAGE)
+	- docker-compose down --rmi all
