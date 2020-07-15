@@ -1,4 +1,5 @@
 FROM python:3.8
+ADD . /app
 WORKDIR /app
 RUN apt-get update && apt-get install sqlite3
 COPY requirements.in /
